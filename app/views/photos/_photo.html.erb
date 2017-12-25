@@ -1,0 +1,24 @@
+ <% end_counter =0 %> 
+ <% if photo_counter % 3 == 0 %> 
+  
+    <div class="row"> 
+ <% end %>    
+   <% end_counter = photo_counter +1 %>
+  <div class="col-md-4">
+    <div class="panel panel-default ">
+      <div class="panel-heading preview">
+        <%= image_tag photo.image.url %>
+      </div>
+      <div class="panel-body">
+        <div class="pull-right">
+          <%= link_to photo, remote: true, method: :delete, data: {confirm: "Are you sure? "} do %> 
+            <i class="fa fa-times fa-lg "></i>
+          <% end %> 
+        </div>
+    </div>
+
+
+    </div> 
+  </div> 
+<% if end_counter %3 == 0 %> </div> <% end %>  
+

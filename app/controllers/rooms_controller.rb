@@ -67,8 +67,5 @@ class RoomsController < ApplicationController
       :address,:is_tv,:is_internet, :is_kitchen,:is_air,:is_heating, :price,:active)
   end
   
-  def photo_params
-    params.require(:room).permit(:image)
-  end 
 
 end
