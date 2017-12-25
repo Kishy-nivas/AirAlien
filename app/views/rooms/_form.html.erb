@@ -140,9 +140,11 @@
           
         </div>
       </div>
-      
+
         <div id ="photos">
-          <%= render @photos %> 
+        <% if @photos %> 
+            <%= render @photos %>
+        <% end %>  
         </div>
 
         
