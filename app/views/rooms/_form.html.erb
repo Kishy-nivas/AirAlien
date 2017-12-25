@@ -5,7 +5,7 @@
   </div>
   <div class="panel-body">
     <div class="container">
-      <%= form_for @room do |f| %> 
+      <%= form_for @room ,html: {multipart: true } do |f| %> 
       <div class="row">
         <div class="col-md-4 select">
           <div class="form_group">
@@ -120,18 +120,42 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-        <%= f.check_box :active %>Active  
+          <div class="form-group">
+             <%= f.check_box :active %>Active 
+          </div>
+        
           
         </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <span class="btn btn-default">
+              <i class ="fa fa-cloud-upload fa-lg"></i> upload photos 
+              <%= f.file_field :image,multiple: true   %> 
+              
+            </span>
+            
+
+            
+          </div>
+          
+        </div>
+        
+
+        
+      </div>
+      <div class="row">
+      
         
       </div>
       <hr>
       <br>
 
+
+
       <div class="row">
         <div class="col-md-6 col-md-offset-5">
           <div class ="form-group">
-            <%= f.submit 'Submit',:class =>'btn btn-primary' %> 
+            <%= f.submit 'Save',:class =>'btn btn-primary' %> 
           </div>
 
         

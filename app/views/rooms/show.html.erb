@@ -1,2 +1,66 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= @room.home_type %>  
+  </div>
+  <div class="panel-body">
+  <div class="row ">
+
+   <div class="col-md-4">
+    Type : <%= @room.room_type %> 
+      
+    </div>
+    <div class="col-md-4">
+      Accomodate : <%= @room.accommodate %> 
+      
+    </div>
+    
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="btn-group">
+        <li>Tv: <%= @room.is_tv %> </li>
+        <li> Internet : <%= @room.is_internet %> </li>
+        <li> Heater : <%= @room.is_heating %> </li>
+        
+      </ul>
+        
+    </div>
+    <div class="col-md-4">
+      <ul class="btn-group">
+        <li> Kitchen : <%= @room.is_kitchen %> </li>
+        <li> Air condition : <%= @room.is_air %> </li>
+
+        
+      </ul>
+      
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <% @photos.each do |photo| %> 
+        <%= image_tag photo.image.url %> 
+      <% end %> 
+      
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      Summary: <%= @room.summary %> 
+      
+    </div>
+
+    <div class="col-md-4">
+      <button class="btn btn-primary">Active: <%= @room.active %> </button>
+      
+    </div>
+    
+  </div>
+    
+
+    
+  </div>
+  
+</div>
