@@ -1,0 +1,66 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= @room.home_type %>  
+  </div>
+  <div class="panel-body">
+    <div class="row ">
+
+     <div class="col-md-4">
+      Type : <%= @room.room_type %> 
+        
+      </div>
+      <div class="col-md-4">
+        Accomodate : <%= @room.accommodate %> 
+        
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="btn-group">
+          <li>Tv: <%= @room.is_tv %> </li>
+          <li> Internet : <%= @room.is_internet %> </li>
+          <li> Heater : <%= @room.is_heating %> </li>
+          
+        </ul>
+          
+      </div>
+      <div class="col-md-4">
+        <ul class="btn-group">
+          <li> Kitchen : <%= @room.is_kitchen %> </li>
+          <li> Air condition : <%= @room.is_air %> </li>
+
+          
+        </ul>
+        
+      </div>
+      
+    </div>
+    <div >
+    <br>
+    <hr>
+   
+      
+      <%= render partial: "photos/list", collection: @photos, as: :photo %> 
+    </div>
+
+          
+    <div class="row">
+      <div class="col-md-4">
+        Summary: <%= @room.summary %> 
+        
+      </div>
+
+      <div class="col-md-4">
+        <button class="btn btn-primary">Active: <%= @room.active %> </button>
+        
+      </div>
+      
+    </div>
+      
+
+    
+  </div>
+  
+</div>

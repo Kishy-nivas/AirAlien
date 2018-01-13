@@ -9,7 +9,6 @@ class RoomsController < ApplicationController
 
   def show
     @photos = @room.photos 
-
   end
 
   def new
